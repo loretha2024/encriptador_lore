@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+</head>
+<body>
+    <main>
+    <header>
+        <img src="imagenes/logo,jpg" alt="Logo alura">
+        <h1> Encriptador</h1>
+    </header>
+            <section>
+                <textarea cols="auto" rows="6" placeholder="Escribe en este campo"></textarea>
+                <div>
+                    <img src="imagenes/signo_admiracion" alt="condiciones de encriptador">
+                    <p>acepta letras minisculas y sin acentos</p>
+                </div>
+                <div>
+                    <button onclick="encriptarMensaje()">Encriptar</button>
+                    <button onclick="desencriptarMensaje()">Desencriptar</button>
+                </div>
+            </section>
+            <section>
+                <textarea readonly="" placeholder="Mensaje no encontrado" cols="17" rows="8"></textarea>
+                <p>Ingrese texto para encriptar o desencriptar</p>
+                <button onclick="copiar()">Copiar</button>
+            </section>
+            <footer> 
+                <p>Realizada por Loretha <br/>
+                Julio 2024</p>
+                <a href="https://github.com/" target="_blank">
+                    <img src="imagenes/github.jpg" alt="GitHub Loretha"/>
+                </a>
+            </footer>
+    </main>
+    <script src="aplicacion.js" defer ></script>
+</body>
+</html>
