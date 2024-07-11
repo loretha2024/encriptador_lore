@@ -1,0 +1,329 @@
+@font-face {
+    font-family: "Barlow, sans-serif";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+    unicode-range: U+00-52F, U+1E00-1FFF, U+2200-22FF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(195, 253, 138);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.cuerpo {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: minmax(60px, auto) 80vh minmax(50px, auto);
+    height: 100vh;
+    grid-template-areas:
+        "titulo titulo"
+        "seccion1 seccion2"
+        "pie-pagina pie-pagina";
+}
+
+.cuerpo .titulo {
+    grid-area: titulo;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    grid-template-columns: 0.1fr 1fr;
+}
+
+.img-titulo {
+    width: 50px;
+    height: 45px;
+    margin-top: 40px;
+    place-self: center;
+}
+
+.tema-titulo {
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: x-large;
+    color: #ff0cef;
+}
+
+.cuerpo .seccion1 {
+    grid-area: seccion1;
+    display: grid;
+    grid-template-rows: 2.5fr 0.1fr 0.4fr;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.seccion1textarea{
+    background: none;
+    border: none;
+    margin: 20px 20px 20px 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: rgb(96, 215, 239);
+    resize:none;
+}
+
+.seccion1.seccion1textarea::placeholder{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: rgb(85, 93, 85);
+}
+
+.seccio1textarea:focus{
+    outline: none;
+}
+
+.seccion1mensaje {
+    background: #fff ;
+    border: none;
+    margin: 20px 20px 20px 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 150%;
+    color: rgb(221, 53, 227);
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+/*
+.seccion1mensaje::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: rgb(119, 12, 117);
+}
+
+.seccion1mensaje:focus {
+    outline: none;
+} 
+*/
+
+.condiciones {
+    display: grid;
+    margin-left: 40px;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+}
+
+.signo-admiracion {
+    width: 30px;
+    height: 30px;
+    margin-top: -8px;
+}
+
+.condiciones p{
+    margin-left: 5px;
+}
+
+.seccion1botones {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.botones {
+    background: #e522be;;
+    cursor: pointer;
+    border: none;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 10px;
+    margin: 20px;
+    width: 300px;
+    height: 60px;
+}
+
+.botones::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: 400%;
+    border-radius: 10px;
+}
+
+.cuerpo .seccion2 {
+    grid-area: seccion2;
+    display: grid;
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    margin-right: 120px;
+    min-width: 360px;
+
+}
+
+.seccion2info {
+    margin: 0 32px;
+    text-align: center;
+    color: #f026b0;
+}
+
+.seccio2mensaje::placeholder {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #104680;
+    opacity: 1;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.seccion2mensaje {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+    filter: hue-rotate(120deg);
+    background-color: #fff;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 150%;
+    color: #8c09a0;
+    text-align: center;
+    resize: none;
+    margin: 0 auto;
+    width: 250px;
+    margin-top: 50px;
+}
+.seccion2mensaje:focus {
+    outline: none;
+}
+
+.botoncopiar.botones {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    color: #fff;
+    background-color: #cf129a;
+}
+
+.cuerpo .pie-pagina {
+    grid-area: pie-pagina;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.creado {
+    /*margin-top: 80px;*/
+    margin-right: 10px;
+    text-align: center;
+}
+
+.imagen-github {
+    width: 30px;
+    height: 30px;
+}
+/* diseño responsive */
+/* pantallas pc */
+@media screen and (max-width:1060px){
+    .cuerpo {
+        max-width: 700px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 6fr 1fr 1fr;
+        grid-template-areas: 
+        "titulo"
+        "seccion1"
+        "seccion2"
+        "pie-pagina";
+    }
+    .cuerpo .seccion1 {
+        grid-area: area1;
+        display: grid;
+        grid-template-rows: 400px 10px 100px;
+    }
+    .seccion1textarea {
+        height: 350px;
+        width: 600px;
+    }
+    .seccion1botones {
+        margin: 0 auto;        
+    }
+    .cuerpo .seccion2 {
+        justify-content: center;
+        height: 350px;
+    }
+    .seccion2 {
+        width: 95%;
+    }
+    .seccion2mensaje{
+        background-image: none;
+    }
+    .seccion2info {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .seccion2mensaje {
+        width: 500px;
+        height: 100px;
+    }
+    .botoncopiar.botones {
+        width: auto;
+        margin-top: -10px;
+    }
+}
+/* diseño responsive */
+/* pantallas celular */
+@media screen and (max-width:690px) {
+    .img-titulo{
+        margin-left: 30px;        
+    }
+    .seccion1textarea{
+        height: 300px;
+        width: 300px;
+    }
+    .seccion1botones{
+        grid-auto-flow: row;
+    }
+    .cuerpo .seccion1 {
+        grid-template-rows: 340px 10px 175px;
+    }
+    .condiciones{
+        margin-left: 10px;
+        justify-content: left;
+    }
+    .botones{
+        margin: 5px;
+    }
+    .cuerpo .seccion2{
+        justify-content: center;
+        height: 300px;
+        width: 300px;
+        margin: auto;
+    }
+    .seccion2mensaje {        
+        width: 200px;
+        height: 200px;
+    }
+    .cuerpo .pie-pagina {
+        margin-top: 35px;
+        font-size: 0.75rem;
+    }
+}
